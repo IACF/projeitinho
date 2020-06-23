@@ -26,6 +26,16 @@
         address{
             text-align: center;
         }
+        div#interacao{
+            margin: auto;
+            text-align: center;
+            font: normal 12pt Arial;
+            background-color: peru;
+            color: rgb(255, 255, 255);
+            width: 410px;
+            height: 50px;
+            line-height: 50px;
+        }
     </style>
     <body>
         <header>
@@ -41,5 +51,25 @@
             <strong>Telefone</strong>:(74) 1234-4321<br>
             <strong>Endereço</strong>: Casa do Pai, Rua Pai ta On, Nº000
         </address>
+        <hr>
+        <div id="interacao">
+            Parabéns, você é o visitante número 999!
+            (Clica aqui rs)
+        </div>
+        <script>
+            var a = document.getElementById('interacao')
+            a.addEventListener('click', click) 
+            a.addEventListener('mouseout', mousesaiu)
+
+            function click(){
+                a.innerHTML = 'Tá em ShoKk??'
+                a.style.background = 'red'
+            }   
+
+            function mousesaiu(){
+                a.innerHTML = 'Parabéns, você é o visitante número 999! (Clica aqui rs)'
+                a.style.background = 'peru'
+            }
+        </script>
     </body>
 </html>
